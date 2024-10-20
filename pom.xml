@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.10</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>id.co.mii</groupId>
+	<artifactId>serverapp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ServerApp SIBKM Batch 04 - Java</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+			<!--  dependency ini menyediakan rangkaian library yang dibutuhkan untuk membangun aplikasi web dengan Spring Boot, seperti Apache Tomcat sebagai web server dan Spring MVC sebagai framework web. -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+			</dependency>
+
+			<!-- dependency ini menyediakan fitur-fitur pengembangan tambahan untuk mempercepat proses pengembangan seperti pengambilan ulang secara otomatis (live reloading) ketika melakukan perubahan pada kode, restart otomatis setelah perubahan pada konfigurasi, dan sebagainya. -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+				<scope>runtime</scope>
+				<optional>true</optional>
+			</dependency>
+
+			<!-- dependency ini menyediakan rangkaian library yang dibutuhkan untuk melakukan pengujian unit pada aplikasi Spring Boot menggunakan framework testing seperti JUnit dan Mockito. -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- dependency ini menyediakan rangkaian library untuk mendukung penggunaan JPA (Java Persistence API) pada aplikasi Spring Boot, termasuk Hibernate sebagai provider JPA dan Spring Data JPA sebagai library yang memudahkan dalam melakukan operasi CRUD (Create, Read, Update, Delete) terhadap database. -->
+			<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-data-jpa</artifactId>
+			</dependency>
+
+			<!-- jika kita menggunakan spring-boot-starter-data-jpa, maka dependency javax.persistence-api sudah disertakan di dalamnya dan tidak perlu ditambahkan lagi secara terpisah. -->
+			<!-- <dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>javax.persistence-api</artifactId>
+				<version>2.2</version>
+			</dependency> -->
+
+
+			<!-- Dependency spring-jdbc diperlukan jika Anda ingin menggunakan JDBC (Java Database Connectivity) di aplikasi Spring Anda. Jika Anda sudah menggunakan Spring Data JPA, maka dependency spring-jdbc tidak perlu lagi ditambahkan, karena sudah termasuk di dalamnya. Namun, jika Anda ingin menggunakan JDBC secara langsung tanpa menggunakan Spring Data JPA, maka Anda perlu menambahkan dependency spring-jdbc tersebut. -->
+			<!-- <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>5.3.9</version>
+			</dependency> -->
+
+
+			<!-- dependency ini menyediakan driver untuk menghubungkan aplikasi dengan database MySQL, sehingga aplikasi dapat berinteraksi dengan database melalui JDBC (Java Database Connectivity). Versi terbaru dari MySQL Connector/J (8.0.27) mendukung fitur-fitur terbaru dari MySQL seperti MySQL X Protocol dan MySQL Caching Sha2 Authentication. -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<scope>runtime</scope>
+				<version>8.0.30</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.26</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+					<groupId>org.modelmapper</groupId>
+					<artifactId>modelmapper</artifactId>
+					<version>3.1.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-mail</artifactId>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>1.4.7</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-security</artifactId>
+				<version>3.0.6</version>
+			</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
